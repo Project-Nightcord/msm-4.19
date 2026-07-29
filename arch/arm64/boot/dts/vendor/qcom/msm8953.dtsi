@@ -30,7 +30,7 @@
 	interrupt-parent = <&wakegic>;
 
 	chosen {
-		bootargs = "console=tty0 fbcon=rotate:1 core_ctl_disable_cpumask=0-7 kpti=0 cgroup.memory=nokmem,nosocket";
+		bootargs = "core_ctl_disable_cpumask=0-7 kpti=0 cgroup.memory=nokmem,nosocket";
 	};
 
 	vendor: vendor {
@@ -135,7 +135,7 @@
 		};
 
 		cont_splash_mem: splash_region@90001000 {
-			reg = <0x0 0x90001000 0x0 0x13ff000>;
+			reg = <0x0 0x90001000 0x0 (1080 * 2160 * 3)>;
 			label = "cont_splash_mem";
 		};
 
