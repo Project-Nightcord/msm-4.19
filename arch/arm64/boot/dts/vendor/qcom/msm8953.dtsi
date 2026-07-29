@@ -31,6 +31,16 @@
 
 	chosen {
 		bootargs = "core_ctl_disable_cpumask=0-7 kpti=0 cgroup.memory=nokmem,nosocket";
+		
+		framebuffer {
+			compatible = "simple-framebuffer";
+			memory-region = <&cont_splash_mem>;
+
+			format = "a8r8g8b8";
+			stride = <(1080 * 4)>;
+			height = <2160>;
+			width = <1080>;
+		};
 	};
 
 	vendor: vendor {
