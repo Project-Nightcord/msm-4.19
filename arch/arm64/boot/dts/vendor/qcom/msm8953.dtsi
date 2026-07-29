@@ -30,7 +30,7 @@
 	interrupt-parent = <&wakegic>;
 
 	chosen {
-		bootargs = "core_ctl_disable_cpumask=0-7 kpti=0 cgroup.memory=nokmem,nosocket";
+		bootargs = "console=tty0 fbcon=rotate:1 core_ctl_disable_cpumask=0-7 kpti=0 cgroup.memory=nokmem,nosocket";
 	};
 
 	vendor: vendor {
